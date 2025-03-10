@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/peraco_website/static/css/main.bfe7df3c.css",
+    "main.js": "/peraco_website/static/js/main.826c2e7d.js",
+    "static/js/453.369e4819.chunk.js": "/peraco_website/static/js/453.369e4819.chunk.js",
+    "static/media/logo_horizontal.png": "/peraco_website/static/media/logo_horizontal.ba65719cfd9e8db5f6da.png",
+    "index.html": "/peraco_website/index.html",
+    "main.bfe7df3c.css.map": "/peraco_website/static/css/main.bfe7df3c.css.map",
+    "main.826c2e7d.js.map": "/peraco_website/static/js/main.826c2e7d.js.map",
+    "453.369e4819.chunk.js.map": "/peraco_website/static/js/453.369e4819.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bfe7df3c.css",
+    "static/js/main.826c2e7d.js"
+  ]
+}
