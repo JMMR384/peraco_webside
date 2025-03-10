@@ -1,38 +1,311 @@
-.App {
-  text-align: center;
+/* Colores institucionales */
+:root {
+  --color-primary: #8feb92c3; /* Azul principal */
+  --color-secondary: #1b8f31; /* Naranja secundario */
+  --color-background: #F4F4F4; /* Fondo gris claro */
+  --color-text: #333333; /* Texto oscuro */
 }
 
+/* Estilos generales */
+.App {
+  text-align: center;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  min-height: 100vh;
+  font-family: 'Anton', sans-serif;
+}
+
+/* Logo de la aplicación */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+/* Animación del logo */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* Encabezado */
 .App-header {
-  background-color: #282c34;
+  background-color: var(--color-primary);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
+/* Enlaces */
 .App-link {
-  color: #61dafb;
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: bold;
 }
 
+.App-link:hover {
+  opacity: 0.8;
+}
+
+/* Animación de rotación del logo */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  height: 100px; /* Altura definida para el contenedor padre */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+header .logo {
+  height: 15vh; /* 80% de la altura del header */
+}
+header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+header nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #4CAF50; /* Cambia el color al pasar el mouse */
+}
+header nav a.active {
+  color: var(--color-secondary); /* Color para el enlace activo */
+  border-bottom: 2px solid var(--color-secondary); /* Subrayado para el enlace activo */
+}
+/* Estilos generales para la sección Hero */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Ocupa toda la altura de la pantalla */
+  background-color: #f4f4f4; /* Fondo gris claro */
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 300px; /* Limita el ancho del contenido */
+}
+
+.hero h1 {
+  font-size: 3rem; /* Tamaño grande para el título principal */
+  color: #1b8f31; /* Color verde para el título */
+  margin-bottom: 1rem;
+}
+
+.hero h2 {
+  font-size: 2rem; /* Tamaño mediano para el subtítulo */
+  color: #333; /* Color oscuro para el subtítulo */
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem; /* Tamaño normal para el párrafo */
+  color: #666; /* Color gris para el texto */
+  margin-bottom: 2rem;
+}
+
+.discover-button {
+  background-color: #1b8f31; /* Color verde para el botón */
+  color: white; /* Texto blanco */
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.discover-button:hover {
+  background-color: #147a26; /* Color verde oscuro al pasar el mouse */
+}
+
+.values {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: white;
+}
+
+.value-card {
+  text-align: center;
+  max-width: 300px;
+}
+
+.services {
+  padding: 2rem;
+  background-color: #F4F4F4;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services li {
+  margin-bottom: 1rem;
+}
+
+.contact {
+  padding: 2rem;
+  background-color: white;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  text-align: center;
+  padding: 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: var(--color-secondary);
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #4CAF50; /* Cambia el color al pasar el mouse */
+}
+/* Estilos para smartphones */
+@media (max-width: 768px) {
+  /* Ajustes generales */
+  .App-header {
+    min-height: auto; /* Elimina la altura mínima del header */
+    padding: 1rem; /* Reduce el padding */
+    font-size: 1.2rem; /* Reduce el tamaño de la fuente */
+  }
+
+  /* Header */
+  header {
+    height: auto; /* Altura automática para el header */
+    flex-direction: column; /* Cambia la dirección a vertical */
+    align-items: center; /* Centra los elementos */
+    padding: 0.5rem; /* Reduce el padding */
+  }
+
+  header .logo {
+    height: 10vh; /* Reduce el tamaño del logo */
+  }
+
+  header nav {
+    flex-direction: column; /* Cambia la dirección del menú a vertical */
+    gap: 0.5rem; /* Reduce el espacio entre enlaces */
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center; /* Centra los enlaces */
+  }
+
+  header nav a {
+    padding: 0.5rem 0; /* Añade padding vertical a los enlaces */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Línea divisoria */
+  }
+
+  /* Hero section */
+  .hero {
+    padding: 1rem; /* Reduce el padding */
+    height: auto; /* Altura automática para el hero */
+    padding: 1rem; /* Reduce el padding */
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Reduce el tamaño del título principal */
+  }
+
+  .hero h2 {
+    font-size: 1.5rem; /* Reduce el tamaño del subtítulo */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Reduce el tamaño del párrafo */
+  }
+
+  .discover-button {
+    padding: 0.8rem 1.5rem; /* Reduce el padding del botón */
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente del botón */
+  }
+
+
+  /* Values section */
+  .values {
+    flex-direction: column; /* Cambia la dirección a vertical */
+    align-items: center; /* Centra los elementos */
+    gap: 1rem; /* Añade espacio entre tarjetas */
+    padding: 1rem; /* Reduce el padding */
+  }
+
+  .value-card {
+    max-width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  /* Services section */
+  .services {
+    padding: 1rem; /* Reduce el padding */
+  }
+
+  .services ul {
+    padding: 0; /* Elimina el padding de la lista */
+  }
+
+  .services li {
+    margin-bottom: 0.5rem; /* Reduce el margen inferior */
+  }
+
+  /* Contact section */
+  .contact {
+    padding: 1rem; /* Reduce el padding */
+  }
+
+  .contact form {
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  /* Footer */
+  footer {
+    padding: 1.5rem; /* Reduce el padding */
+  }
+
+  .social-links {
+    flex-direction: row; /* Cambia la dirección a vertical */
+    gap: 1.5rem; /* Reduce el espacio entre íconos */
   }
 }
