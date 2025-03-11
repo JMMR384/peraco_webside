@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import News from './pages/News'; // Importa el componente de noticias
 import './App.css';
 
 const App = () => {
@@ -28,6 +29,9 @@ const App = () => {
 
           {/* Contacto */}
           <Route path="/contact" element={<Contact />} />
+
+          {/* Noticias */}
+          <Route path="/news" element={<News />} />
         </Routes>
       </main>
 

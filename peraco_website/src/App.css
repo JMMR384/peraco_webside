@@ -1,190 +1,224 @@
-/* Colores institucionales */
+/* Estilos generales */
 :root {
   --color-primary: #8feb92c3; /* Azul principal */
   --color-secondary: #1b8f31; /* Naranja secundario */
-  --color-background: #F4F4F4; /* Fondo gris claro */
+  --color-background: #f4f4f4; /* Fondo gris claro */
   --color-text: #333333; /* Texto oscuro */
+  --color-cards:#8feb926d;
 }
 
-/* Estilos generales */
-.App {
-  text-align: center;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  min-height: 100vh;
-  font-family: 'Anton', sans-serif;
-}
-
-/* Logo de la aplicación */
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-/* Animación del logo */
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-/* Encabezado */
-.App-header {
-  background-color: var(--color-primary);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(0, 0, 0);
-}
-
-/* Enlaces */
-.App-link {
-  color: var(--color-secondary);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.App-link:hover {
-  opacity: 0.8;
-}
-
-/* Animación de rotación del logo */
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/* Estilos generales */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Anton', sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
+/* Header */
 header {
-  height: 100px; /* Altura definida para el contenedor padre */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background-color: var(--color-primary);
-  color: var(--color-text);
 }
 
 header .logo {
-  height: 15vh; /* 80% de la altura del header */
+  height: 15vh; /* Altura del logo */
+  width: auto;
 }
+
 header nav {
   display: flex;
   gap: 1rem;
 }
 
 header nav a {
-  color: rgb(0, 0, 0);
+  color: var(--color-text);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 header nav a:hover {
-  color: #4CAF50; /* Cambia el color al pasar el mouse */
+  color: var(--color-secondary);
 }
+
 header nav a.active {
-  color: var(--color-secondary); /* Color para el enlace activo */
-  border-bottom: 2px solid var(--color-secondary); /* Subrayado para el enlace activo */
-}
-/* Estilos generales para la sección Hero */
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh; /* Ocupa toda la altura de la pantalla */
-  background-color: #f4f4f4; /* Fondo gris claro */
-  text-align: center;
-  padding: 2rem;
+  color: var(--color-secondary);
+  border-bottom: 2px solid var(--color-secondary);
 }
 
-.hero-content {
-  max-width: 300px; /* Limita el ancho del contenido */
-}
-
-.hero h1 {
-  font-size: 3rem; /* Tamaño grande para el título principal */
-  color: #1b8f31; /* Color verde para el título */
-  margin-bottom: 1rem;
-}
-
-.hero h2 {
-  font-size: 2rem; /* Tamaño mediano para el subtítulo */
-  color: #333; /* Color oscuro para el subtítulo */
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem; /* Tamaño normal para el párrafo */
-  color: #666; /* Color gris para el texto */
-  margin-bottom: 2rem;
-}
-
-.discover-button {
-  background-color: #1b8f31; /* Color verde para el botón */
-  color: white; /* Texto blanco */
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1rem;
+/* Ícono de hamburguesa (solo en móviles) */
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
 }
-
-.discover-button:hover {
-  background-color: #147a26; /* Color verde oscuro al pasar el mouse */
-}
-
+/* Estilos generales para la sección Values */
 .values {
   display: flex;
   justify-content: space-around;
   padding: 2rem;
-  background-color: white;
+  
 }
 
 .value-card {
   text-align: center;
-  max-width: 300px;
+  max-width: 400px;
+  height: 150px;
+  border-radius: 8px;
+  background-color: var(--color-cards);
 }
 
-.services {
-  padding: 2rem;
-  background-color: #F4F4F4;
-}
-
-.services ul {
-  list-style: none;
-  padding: 0;
-}
-
-.services li {
+.value-card h3 {
+  font-size: 1.5rem;
+  color: #1b8f31; /* Color verde para los títulos */
   margin-bottom: 1rem;
 }
 
-.contact {
-  padding: 2rem;
-  background-color: white;
+.value-card p {
+  font-size: 1rem;
+  color: #666; /* Color gris para el texto */
 }
 
-.contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Muestra el ícono en móviles */
+  }
+  header{
+    width: 90%;
+  }
+  header .logo {
+    padding-left: 2px;
+    height: 9vh; /* Altura del logo */
+    width: auto;
+  }
+  header nav {
+    position: absolute;
+    top: 100%; /* Coloca el menú debajo del header */
+    left: 0;
+    width: 99%;
+    background-color: var(--color-primary);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 1000;
+    transition: max-height 0.3s ease;
+  }
+
+  header nav.nav-active {
+    max-height: 300px; /* Altura máxima del menú desplegable */
+  }
+
+  header nav a {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+.values {
+  flex-direction: column; /* Cambia la dirección a vertical */
+  align-items: center; /* Centra los elementos */
+  gap: 1rem; /* Añade espacio entre tarjetas */
+  padding: 1rem; /* Reduce el padding */
 }
 
+.value-card {
+  max-width: 100%; /* Ocupa todo el ancho disponible */
+}
+main{
+  padding-top: 100px;
+}
+}
+
+/* Ajuste para el contenido principal */
+main {
+  padding-top: 144px; /* Ajusta este valor según la altura del header */
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-slide {
+  position: relative;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 400px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1rem;
+}
+
+/* Estilos para los puntos de navegación */
+.slick-dots {
+  bottom: 20px;
+}
+
+.slick-dots li button:before {
+  color: white; /* Color de los puntos */
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--color-secondary); /* Color del punto activo */
+}
+
+/* Estilos para dispositivos móviles en el Hero */
+@media (max-width: 768px) {
+  .hero-image {
+    height: 300px; /* Reduce la altura de las imágenes en móviles */
+  }
+
+  .hero-content {
+    padding: 0.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem; /* Reduce el tamaño del título en móviles */
+  }
+
+  .hero-content p {
+    font-size: 0.9rem; /* Reduce el tamaño del texto en móviles */
+  }
+}
+
+/* Footer */
 footer {
   background-color: var(--color-primary);
   color: var(--color-text);
@@ -207,105 +241,15 @@ footer {
 .social-links a:hover {
   color: #4CAF50; /* Cambia el color al pasar el mouse */
 }
-/* Estilos para smartphones */
+
+/* Estilos para dispositivos móviles en el Footer */
 @media (max-width: 768px) {
-  /* Ajustes generales */
-  .App-header {
-    min-height: auto; /* Elimina la altura mínima del header */
-    padding: 1rem; /* Reduce el padding */
-    font-size: 1.2rem; /* Reduce el tamaño de la fuente */
-  }
-
-  /* Header */
-  header {
-    height: auto; /* Altura automática para el header */
-    flex-direction: column; /* Cambia la dirección a vertical */
-    align-items: center; /* Centra los elementos */
-    padding: 0.5rem; /* Reduce el padding */
-  }
-
-  header .logo {
-    height: 10vh; /* Reduce el tamaño del logo */
-  }
-
-  header nav {
-    flex-direction: column; /* Cambia la dirección del menú a vertical */
-    gap: 0.5rem; /* Reduce el espacio entre enlaces */
-    width: 100%; /* Ocupa todo el ancho */
-    text-align: center; /* Centra los enlaces */
-  }
-
-  header nav a {
-    padding: 0.5rem 0; /* Añade padding vertical a los enlaces */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Línea divisoria */
-  }
-
-  /* Hero section */
-  .hero {
-    padding: 1rem; /* Reduce el padding */
-    height: auto; /* Altura automática para el hero */
-    padding: 1rem; /* Reduce el padding */
-  }
-
-  .hero h1 {
-    font-size: 2rem; /* Reduce el tamaño del título principal */
-  }
-
-  .hero h2 {
-    font-size: 1.5rem; /* Reduce el tamaño del subtítulo */
-  }
-
-  .hero p {
-    font-size: 1rem; /* Reduce el tamaño del párrafo */
-  }
-
-  .discover-button {
-    padding: 0.8rem 1.5rem; /* Reduce el padding del botón */
-    font-size: 0.9rem; /* Reduce el tamaño de la fuente del botón */
-  }
-
-
-  /* Values section */
-  .values {
-    flex-direction: column; /* Cambia la dirección a vertical */
-    align-items: center; /* Centra los elementos */
-    gap: 1rem; /* Añade espacio entre tarjetas */
-    padding: 1rem; /* Reduce el padding */
-  }
-
-  .value-card {
-    max-width: 100%; /* Ocupa todo el ancho disponible */
-  }
-
-  /* Services section */
-  .services {
-    padding: 1rem; /* Reduce el padding */
-  }
-
-  .services ul {
-    padding: 0; /* Elimina el padding de la lista */
-  }
-
-  .services li {
-    margin-bottom: 0.5rem; /* Reduce el margen inferior */
-  }
-
-  /* Contact section */
-  .contact {
-    padding: 1rem; /* Reduce el padding */
-  }
-
-  .contact form {
-    width: 100%; /* Ocupa todo el ancho disponible */
-  }
-
-  /* Footer */
   footer {
-    padding: 1.5rem; /* Reduce el padding */
+    padding: 0.5rem; /* Reduce el padding */
   }
 
   .social-links {
     flex-direction: row; /* Cambia la dirección a vertical */
-    gap: 1.5rem; /* Reduce el espacio entre íconos */
+    gap: 0.5rem; /* Reduce el espacio entre íconos */
   }
 }
