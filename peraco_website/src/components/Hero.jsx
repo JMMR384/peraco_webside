@@ -31,7 +31,7 @@ const Hero = () => {
     },
     {
       id: 3,
-      image: 'https://via.placeholder.com/800x400?text=Noticia+3', // URL de la imagen
+      image: 'https://i.pinimg.com/736x/a8/46/b2/a846b2ea223080bc25cb3786893e5ee8.jpg', // URL de la imagen
       title: 'Evento de sostenibilidad en la comunidad',
       description: 'Participamos en un evento comunitario para promover prácticas agrícolas sostenibles y responsables.',
     },

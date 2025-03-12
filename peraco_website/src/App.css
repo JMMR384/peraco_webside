@@ -70,7 +70,10 @@ header nav a.active {
   padding: 2rem;
   background-color: var(--color-background);
 }
-
+.title{
+  font-size: 2rem;
+  color: var(--color-secondary)
+}
 .value-card {
   text-align: center;
   max-width: 400px;
@@ -329,6 +332,104 @@ header nav a.active {
   color: #444;
   line-height: 1.6;
 }
+.news-slider {
+  text-align: center;
+  background-color: var(--color-background);
+  margin: 0 15px;
+}
+
+.news-slider h2 {
+  font-size: 2rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.news-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  margin: 0 10px; /* Aumenté la separación horizontal */
+  width: 90%;
+}
+.slick-slide {
+display: flex;
+justify-content: center;
+padding: 10px; /* Agrega más espacio a los lados de cada slide */
+}
+.slick-list {
+  overflow: visible !important; /* Asegura que no se corten */
+}
+
+.slick-track {
+  display: flex;
+}
+
+.news-card:hover {
+  transform: scale(1.05);
+}
+
+.news-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-info {
+  padding: 1rem;
+}
+
+.news-info h3 {
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+.news-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.news-content {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover {
+  background-color: var(--color-primary);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+  .news-card {
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-slider {
+    padding: 1rem;
+  }
+
+  .news-card {
+    margin: 0 auto;
+  }
+}
+
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
   .menu-icon {

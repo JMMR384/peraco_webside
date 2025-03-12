@@ -2,7 +2,9 @@ import React from 'react';
 
 const Values = () => {
   return (
+   
     <section className="values">
+       <h2 className='title'>Nuestros valores</h2>
       <div className="value-card">
         <h2>Confianza</h2>
         <p>Construimos relaciones basadas en la confianza y la transparencia.</p>
