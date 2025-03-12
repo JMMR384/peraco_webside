@@ -6,7 +6,7 @@ const Contact = () => {
       <h1>Contáctanos</h1>
       <div className="contact-container">
         <div className="contact-image">
-          <img src="https://via.placeholder.com/400x500?text=Imagen+Contacto" alt="Imagen de Contacto" />
+          <img src="https://i.pinimg.com/736x/af/18/6c/af186ca7186d86d00327b50e8c155840.jpg" alt="Imagen de Contacto" />
         </div>
         <form className="contact-form">
           <div className="form-group">
