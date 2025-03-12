@@ -19,7 +19,7 @@ const App = () => {
       <main>
         <Routes>
           {/* Página de Inicio */}
-          <Route path="/" element={<Home />} />
+          <Route path="/peraco_website" element={<Home />} />
 
           {/* Sobre Nosotros */}
           <Route path="/about" element={<AboutUs />} />

@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <header>
-      <Link to="/">
+      <Link to="/peraco_website">
         <img src={logo} alt="Logo de Peraco" className="logo" />
       </Link>
 
@@ -25,7 +25,7 @@ const Header = () => {
 
       {/* Menú de navegación */}
       <nav className={isMenuOpen ? 'nav-active' : ''}>
-        <Link to="/" onClick={toggleMenu}>Inicio</Link>
+        <Link to="/peraco_website" onClick={toggleMenu}>Inicio</Link>
         <Link to="/about" onClick={toggleMenu}>Sobre Nosotros</Link>
         <Link to="/services" onClick={toggleMenu}>Servicios</Link>
         <Link to="/news" onClick={toggleMenu}>Noticias</Link>

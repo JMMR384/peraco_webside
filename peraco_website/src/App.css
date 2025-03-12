@@ -68,7 +68,7 @@ header nav a.active {
   display: flex;
   justify-content: space-around;
   padding: 2rem;
-  
+  background-color: var(--color-background);
 }
 
 .value-card {
@@ -76,7 +76,8 @@ header nav a.active {
   max-width: 400px;
   height: 150px;
   border-radius: 8px;
-  background-color: var(--color-cards);
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .value-card h3 {
@@ -89,7 +90,242 @@ header nav a.active {
   font-size: 1rem;
   color: #666; /* Color gris para el texto */
 }
+/* Estilos generales para la sección About Us */
+.about-us {
+  padding: 2rem;
+  background-color: #f4f4f4;
+  text-align: center;
+}
 
+.about-us h1 {
+  font-size: 2.5rem;
+  color: #1b8f31; /* Color verde para el título */
+  margin-bottom: 2rem;
+}
+
+/* Estilos para cada sección (Misión, Visión, Valores) */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  padding: 1rem;
+}
+
+/* Estilos para el texto */
+.about-text {
+  flex: 1;
+  text-align: left;
+  padding: 1rem;
+}
+
+.about-text h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Estilos para las imágenes */
+.about-image {
+  flex: 1;
+  padding: 1rem;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternar la posición de las imágenes y el texto */
+.mission .about-text {
+  order: 2; /* Texto a la derecha */
+}
+
+.mission .about-image {
+  order: 1; /* Imagen a la izquierda */
+}
+
+.vision .about-text {
+  order: 1; /* Texto a la izquierda */
+}
+
+.vision .about-image {
+  order: 2; /* Imagen a la derecha */
+}
+
+.values .about-text {
+  order: 2; /* Texto a la derecha */
+}
+
+.values .about-image {
+  order: 1; /* Imagen a la izquierda */
+}
+/* Estilos generales para la sección Contact */
+.contact {
+  padding: 15px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 2.5rem;
+  color: #1b8f31; /* Color verde para el título */
+  margin-bottom: 2rem;
+}
+
+/* Contenedor principal (imagen + formulario) */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Evita que la imagen sobresalga del contenedor */
+}
+
+/* Estilos para la imagen */
+.contact-image {
+  flex: 1;
+  min-width: 300px; /* Ancho mínimo para la imagen */
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+}
+
+/* Estilos para el formulario */
+.contact-form {
+  flex: 1;
+  padding: 1rem;
+  text-align: left;
+}
+
+/* Estilos para los grupos de formulario */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #1b8f31; /* Cambia el color del borde al enfocar */
+  outline: none; /* Quita el contorno predeterminado */
+}
+
+.form-group textarea {
+  resize: vertical; /* Permite redimensionar verticalmente el textarea */
+}
+
+/* Estilos para el botón de enviar */
+.submit-button {
+  background-color: #1b8f31; /* Color verde para el botón */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Botón ocupa todo el ancho */
+}
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-text,
+  .about-image {
+    order: 0 !important; /* Restablece el orden en móviles */
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+}
+/* Estilos generales para la página de noticias */
+.news {
+  padding: 2rem;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.news h1 {
+  font-size: 2.5rem;
+  color: #1b8f31; /* Color verde para el título */
+  margin-bottom: 2rem;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.news-item {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.news-item h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.news-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.news-content {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
   .menu-icon {
@@ -196,7 +432,7 @@ main {
 }
 
 .slick-dots li.slick-active button:before {
-  color: var(--color-secondary); /* Color del punto activo */
+  color: #2eff54; /* Color del punto activo */
 }
 
 /* Estilos para dispositivos móviles en el Hero */
