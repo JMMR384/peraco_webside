@@ -1,12 +1,14 @@
 import React from 'react';
 import { FaFacebook, FaLinkedin } from 'react-icons/fa'; // Iconos de Font Awesome
 import { FaXTwitter } from 'react-icons/fa6'; // Ícono de X (Twitter)
+import logo from '../assests/images/logo_original.png';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
+    <div className="footer-left">
       <p>Peraco © 2023 - Todos los derechos reservados</p>
-      <div className="social-links">
+      <div className="footer-social">
         <a href="https://facebook.com/peraco" target="_blank" rel="noopener noreferrer">
           <FaFacebook size={24} />
         </a>
@@ -17,7 +19,9 @@ const Footer = () => {
           <FaLinkedin size={24} />
         </a>
       </div>
-    </footer>
+    </div>
+    <img src={logo} alt="Peraco Logo" className="footer-logo" />
+  </footer>
   );
 };
 

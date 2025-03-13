@@ -9,10 +9,12 @@
 
 body {
   font-family: 'Anton', sans-serif;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   background-color: var(--color-background);
   color: var(--color-text);
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -81,6 +83,7 @@ header nav a.active {
   border-radius: 8px;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 5px;
 }
 
 .value-card h3 {
@@ -272,6 +275,7 @@ header nav a.active {
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
+  
   .about-section {
     flex-direction: column;
   }
@@ -299,13 +303,7 @@ header nav a.active {
   margin-bottom: 2rem;
 }
 
-.news-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
+
 
 .news-item {
   background-color: white;
@@ -337,26 +335,38 @@ header nav a.active {
   background-color: var(--color-background);
   margin: 0 15px;
 }
-
+.news-slider .slick-slide{
+  margin: 0 10px;
+}
 .news-slider h2 {
   font-size: 2rem;
   color: var(--color-secondary);
   margin-bottom: 1rem;
 }
-
+.news-section{
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
 .news-card {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  margin: 0 10px; /* Aumenté la separación horizontal */
-  width: 90%;
+  width: 100%;
 }
-.slick-slide {
-display: flex;
-justify-content: center;
-padding: 10px; /* Agrega más espacio a los lados de cada slide */
+.hero.slick-slide {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news-list.slick-slide{
+  padding: 10px;
 }
 .slick-list {
   overflow: visible !important; /* Asegura que no se corten */
@@ -412,7 +422,77 @@ padding: 10px; /* Agrega más espacio a los lados de cada slide */
 .read-more:hover {
   background-color: var(--color-primary);
 }
+/* 🎯 RESPONSIVE: Ajustes para tablets */
+@media (max-width: 1024px) {
+  body{
+    width: 1024px;
+  }
+  header{
+    padding: 1rem;
+    width: 24%;
+  }
 
+  header .logo {
+    padding-left: 2px;
+    height: 9vh; /* Altura del logo */
+    width: auto;
+  }
+  header nav {
+    position: absolute;
+    top: 100%; /* Coloca el menú debajo del header */
+    left: 0;
+    width: 90%;
+    background-color: var(--color-primary);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 1000;
+    transition: max-height 0.3s ease;
+  }
+
+  header nav.nav-active {
+    max-height: 300px; /* Altura máxima del menú desplegable */
+  }
+
+  header nav a {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .menu-icon {
+    display: block; /* Muestra el ícono en móviles */
+  }
+  .news-section {
+    max-width: 95%; /* Hace que ocupe más en pantallas medianas */
+  }
+
+  .news-card {
+    width: 100%; /* Aprovecha mejor el espacio */
+    margin: 0 5px; /* Reduce separación */
+  }
+
+  .slick-slide {
+    padding: 5px; /* Menos padding para no expandir la página */
+  }
+}
+
+/* 🎯 RESPONSIVE: Ajustes para móviles */
+@media (max-width: 768px) {
+  .news-section {
+    max-width: 100%; /* Usa todo el ancho en móviles */
+    padding: 10px;
+  }
+
+  .news-card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .slick-slide {
+    padding: 3px;
+  }
+}
 /* Ajustes responsivos */
 @media (max-width: 1024px) {
   .news-card {
@@ -436,7 +516,8 @@ padding: 10px; /* Agrega más espacio a los lados de cada slide */
     display: block; /* Muestra el ícono en móviles */
   }
   header{
-    width: 90%;
+    padding: 1rem;
+    width: 23%;
   }
   header .logo {
     padding-left: 2px;
@@ -489,7 +570,7 @@ main {
 
 /* Hero Section */
 .hero {
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
   position: relative;
 }
@@ -514,7 +595,7 @@ main {
   background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
   padding: 1rem;
   border-radius: 8px;
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .hero-content h1 {
@@ -559,29 +640,41 @@ main {
 }
 
 /* Footer */
-footer {
-  background-color: var(--color-primary);
-  color: var(--color-text);
-  text-align: center;
-  padding: 1rem;
-}
-
-.social-links {
+/* Footer */
+.footer {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--color-primary); /* Ajusta el color según tu diseño */
+  color: rgb(0, 0, 0);
 }
 
-.social-links a {
+.footer-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-social a {
   color: var(--color-secondary);
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
-.social-links a:hover {
-  color: #4CAF50; /* Cambia el color al pasar el mouse */
+.footer-social a:hover {
+  color: #ccc;
 }
 
+.footer-logo {
+  width: 200px; /* Ajusta el tamaño según tu logo */
+  height: auto;
+  margin-right: 10px;
+}
 /* Estilos para dispositivos móviles en el Footer */
 @media (max-width: 768px) {
   footer {
