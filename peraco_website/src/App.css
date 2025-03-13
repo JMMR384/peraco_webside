@@ -311,6 +311,7 @@ header nav a.active {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: left;
+  margin-top: 10px;
 }
 
 .news-item h2 {
@@ -355,6 +356,7 @@ header nav a.active {
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   width: 100%;
+ 
 }
 .hero.slick-slide {
   width: 100%;

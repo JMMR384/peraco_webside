@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="footer">
     <div className="footer-left">
-      <p>Peraco © 2023 - Todos los derechos reservados</p>
+      <p>Peraco © 2025 - Todos los derechos reservados</p>
       <div className="footer-social">
         <a href="https://facebook.com/peraco" target="_blank" rel="noopener noreferrer">
           <FaFacebook size={24} />
