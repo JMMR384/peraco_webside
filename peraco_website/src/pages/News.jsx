@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const News = () => {
+  const navigate = useNavigate();
+
   // Datos de ejemplo para las noticias
   const news = [
     {
@@ -28,7 +31,7 @@ const News = () => {
       <h1>Noticias de Peraco</h1>
       <div className="news-list">
         {news.map((item) => (
-          <div key={item.id} className="news-item">
+          <div key={item.id} className="news-item" onClick={() => navigate(`/news/${item.id}`)} style={{ cursor: 'pointer' }}>
             <h2>{item.title}</h2>
             <p className="news-date">{item.date}</p>
             <p className="news-content">{item.content}</p>

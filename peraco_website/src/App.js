@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import News from './pages/News'; // Importa el componente de noticias
+import NewsDetail from './pages/NewsDetail';
 import './App.css';
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
 
           {/* Noticias */}
           <Route path="/news" element={<News />} />
+          <Route path="/news/:id" element={<NewsDetail />} />
         </Routes>
       </main>
 
