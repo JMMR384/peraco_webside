@@ -25,13 +25,13 @@ const Hero = () => {
     },
     {
       id: 2,
-      image: 'https://i.pinimg.com/736x/df/d9/f3/dfd9f3d919c1027daf14885cc3bad5d0.jpg', // URL de la imagen
+      image: 'https://i.pinimg.com/736x/30/57/61/305761d2054c6154b1b415e275461700.jpg', // URL de la imagen
       title: 'Lanzamiento de la nueva línea de productos orgánicos',
       description: 'Presentamos nuestra nueva línea de productos orgánicos, cultivados con técnicas respetuosas con el medio ambiente.',
     },
     {
       id: 3,
-      image: 'https://i.pinimg.com/736x/a8/46/b2/a846b2ea223080bc25cb3786893e5ee8.jpg', // URL de la imagen
+      image: 'https://i.pinimg.com/736x/bb/42/be/bb42be855d6344ead4ec99ab0971c22c.jpg', // URL de la imagen
       title: 'Evento de sostenibilidad en la comunidad',
       description: 'Participamos en un evento comunitario para promover prácticas agrícolas sostenibles y responsables.',
     },

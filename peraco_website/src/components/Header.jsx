@@ -25,11 +25,11 @@ const Header = () => {
 
       {/* Menú de navegación */}
       <nav className={isMenuOpen ? 'nav-active' : ''}>
-        <Link to="/peraco_website" onClick={toggleMenu}>Inicio</Link>
-        <Link to="/about" onClick={toggleMenu}>Sobre Nosotros</Link>
-        <Link to="/services" onClick={toggleMenu}>Servicios</Link>
-        <Link to="/news" onClick={toggleMenu}>Noticias</Link>
-        <Link to="/contact" onClick={toggleMenu}>Contacto</Link>
+        <Link to="/peraco_website" onClick={toggleMenu}><h3>Inicio</h3></Link>
+        <Link to="/about" onClick={toggleMenu}><h3>Sobre Nosotros</h3></Link>
+        <Link to="/services" onClick={toggleMenu}><h3>Servicios</h3></Link>
+        <Link to="/news" onClick={toggleMenu}><h3>Noticias</h3></Link>
+        <Link to="/contact" onClick={toggleMenu}><h3>Contacto</h3></Link>
       </nav>
     </header>
   );
