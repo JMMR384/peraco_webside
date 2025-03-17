@@ -430,11 +430,12 @@ header nav a.active {
 /* 🎯 RESPONSIVE: Ajustes para tablets */
 @media (max-width: 1024px) {
   body{
-    width: 1024px;
+    width: 300px;
+    padding-right: 100px;
   }
   header{
     padding: 1rem;
-    width: 24%;
+    width: 98%;
   }
 
   header .logo {
@@ -569,12 +570,14 @@ header nav a.active {
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
+  
   .menu-icon {
     display: block; /* Muestra el ícono en móviles */
   }
   header{
     padding: 1rem;
-    width: 23%;
+    min-width: 350px;
+    max-width: 400px;
   }
   header .logo {
     padding-left: 2px;
@@ -697,41 +700,134 @@ main {
 }
 
 /* Footer */
-/* Footer */
 .footer {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 40px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: var(--color-primary); /* Ajusta el color según tu diseño */
-  color: rgb(0, 0, 0);
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.footer-left {
+.footer-column {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+.footer-column a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* Columna central */
+.footer-center {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  width: 170px;
+  margin-bottom: 10px;
+}
+
+.footer-center h4 {
+  font-size: 18px;
+  color: var(--color-secondary);
+  margin-top: 10px;
+}
+
+.footer-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.footer-form input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;           
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);;
+}
+
+.footer-form button {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-form button:hover {
+  opacity: 0.9;
+}
+
+.footer-center label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--color-secondary);
+  margin-top: 10px;
+}
+
+/* Redes sociales */
 .footer-social {
   display: flex;
   gap: 15px;
-  margin-top: 10px;
+  margin-top: 20px;
+  justify-content: center;
 }
 
 .footer-social a {
   color: var(--color-secondary);
+  font-size: 24px;
   transition: color 0.3s;
 }
 
 .footer-social a:hover {
-  color: #ccc;
+  color: #9CC200;
 }
 
-.footer-logo {
-  width: 200px; /* Ajusta el tamaño según tu logo */
-  height: auto;
-  margin-right: 10px;
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column, .footer-center {
+    width: 100%;
+    align-items: center;
+  }
 }
+
 /* Estilos para dispositivos móviles en el Footer */
 @media (max-width: 768px) {
   footer {
@@ -741,5 +837,93 @@ main {
   .social-links {
     flex-direction: row; /* Cambia la dirección a vertical */
     gap: 0.5rem; /* Reduce el espacio entre íconos */
+  }
+}
+/* Contenedor principal */
+.services-container {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+}
+
+/* Título de la sección */
+.services-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #16502D;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de los servicios */
+.services-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Tarjeta de servicio */
+.service-card {
+  background-color: white;
+
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+/* Enlace */
+.service-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #1B8F31;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.service-link:hover {
+  background-color: #16502D;
+}
+
+/* 📱 Responsividad 📱 */
+
+/* Para tablets (pantallas menores a 768px) */
+@media (max-width: 768px) {
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 80%;
+    max-width: 400px;
+  }
+}
+
+/* Para smartphones (pantallas menores a 480px) */
+@media (max-width: 480px) {
+  .services-container {
+    padding: 30px 10px;
+  }
+
+  .services-title {
+    font-size: 1.5rem;
+  }
+
+  .service-card {
+    width: 90%;
+  }
+
+  .service-link {
+    padding: 10px;
+    font-size: 1rem;
   }
 }
