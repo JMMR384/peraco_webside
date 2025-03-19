@@ -38,11 +38,7 @@ const Footer = () => {
           <a href="#">Peraco México</a>
           <div className="footer-social">
             <a href="#"><FaFacebook /></a>
-            <a href="#"><FaXTwitter /></a>
-            <a href="#"><FaLinkedin /></a>
             <a href="#"><FaInstagram /></a>
-            <a href="#"><FaPinterest /></a>
-            <a href="#"><FaYoutube /></a>
           </div>
         </div>
       </div>
