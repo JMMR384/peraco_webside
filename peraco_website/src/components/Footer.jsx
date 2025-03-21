@@ -1,6 +1,5 @@
 import React from "react";
-import { FaFacebook, FaLinkedin, FaInstagram, FaPinterest, FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebook,  FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo from "../assests/images/logo_original.png";
 
 const Footer = () => {
@@ -39,6 +38,7 @@ const Footer = () => {
           <div className="footer-social">
             <a href="#"><FaFacebook /></a>
             <a href="#"><FaInstagram /></a>
+            <a href="#"><FaLinkedin /></a>
           </div>
         </div>
       </div>

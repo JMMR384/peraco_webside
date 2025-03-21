@@ -19,13 +19,13 @@ const Hero = () => {
   const news = [
     {
       id: 1,
-      image: 'https://i.pinimg.com/736x/2a/64/e7/2a64e71703334e324dfbdb45663ec5d5.jpg', // URL de la imagen
+      image: 'https://i.pinimg.com/736x/00/b3/31/00b3319d9355586ba6a759649b947814.jpg', // URL de la imagen
       title: 'Nueva asociación con agricultores locales',
       description: 'Peraco ha firmado un acuerdo con agricultores locales para promover productos frescos y sostenibles.',
     },
     {
       id: 2,
-      image: 'https://i.pinimg.com/736x/30/57/61/305761d2054c6154b1b415e275461700.jpg', // URL de la imagen
+      image: 'https://i.pinimg.com/736x/7d/d0/41/7dd0412f3272d107fe3eb08e6eb9614d.jpg', // URL de la imagen
       title: 'Lanzamiento de la nueva línea de productos orgánicos',
       description: 'Presentamos nuestra nueva línea de productos orgánicos, cultivados con técnicas respetuosas con el medio ambiente.',
     },
