@@ -935,7 +935,7 @@ main {
   background: #d5d4d4 ;
 }
 ::-webkit-scrollbar-thumb{
-  background: var(--color-secondary) ;
+  background: #9CC200 ;
   border-radius: 12px;
-  border: 8px  dotted var(--color-secondary) ;
+  border: 8px solid #9cc200 ;
 }
