@@ -1,4 +1,3 @@
-/* Estilos generales */
 :root {
   --color-primary: #ffffff; /* Azul principal */
   --color-secondary: #1b8f31; /* Naranja secundario */
@@ -15,6 +14,11 @@ body {
   color: var(--color-text);
   max-width: 100vw;
   overflow-x: hidden;
+}
+html, body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Header */
@@ -275,23 +279,7 @@ header nav a.active {
 }
 
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-  
-  .about-section {
-    flex-direction: column;
-  }
 
-  .about-text,
-  .about-image {
-    order: 0 !important; /* Restablece el orden en móviles */
-    text-align: center;
-  }
-
-  .about-image img {
-    max-width: 100%;
-  }
-}
 /* Estilos generales para la página de noticias */
 .news {
   padding: 2rem;
@@ -427,84 +415,10 @@ header nav a.active {
 .read-more:hover {
   background-color: var(--color-primary);
 }
-/* 🎯 RESPONSIVE: Ajustes para tablets */
-@media (max-width: 1024px) {
-  body{
-    width: 300px;
-    padding-right: 100px;
-  }
-  header{
-    padding: 1rem;
-    width: 98%;
-  }
 
-  header .logo {
-    padding-left: 2px;
-    height: 9vh; /* Altura del logo */
-    width: auto;
-  }
-  header nav {
-    position: absolute;
-    top: 100%; /* Coloca el menú debajo del header */
-    left: 0;
-    width: 90%;
-    background-color: var(--color-primary);
-    flex-direction: column;
-    gap: 0;
-    max-height: 0;
-    overflow: hidden;
-    z-index: 1000;
-    transition: max-height 0.3s ease;
-  }
 
-  header nav.nav-active {
-    max-height: 300px; /* Altura máxima del menú desplegable */
-  }
 
-  header nav a {
-    padding: 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  .menu-icon {
-    display: block; /* Muestra el ícono en móviles */
-  }
-  .news-section {
-    max-width: 95%; /* Hace que ocupe más en pantallas medianas */
-  }
 
-  .news-card {
-    width: 100%; /* Aprovecha mejor el espacio */
-    margin: 0 5px; /* Reduce separación */
-  }
-
-  .slick-slide {
-    padding: 5px; /* Menos padding para no expandir la página */
-  }
-}
-
-/* 🎯 RESPONSIVE: Ajustes para móviles */
-@media (max-width: 768px) {
-  .news-section {
-    max-width: 100%; /* Usa todo el ancho en móviles */
-    padding: 10px;
-  }
-
-  .news-card {
-    width: 100%;
-    margin: 0;
-  }
-
-  .slick-slide {
-    padding: 3px;
-  }
-}
-/* Ajustes responsivos */
-@media (max-width: 1024px) {
-  .news-card {
-    margin: 0 5px;
-  }
-}
 .news-detail {
   max-width: 1200px;
   margin: 0 auto;
@@ -545,82 +459,6 @@ header nav a.active {
   line-height: 1.5;
 }
 
-/* Diseño responsivo */
-@media (max-width: 768px) {
-  .news-detail {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .news-detail img {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .news-slider {
-    padding: 1rem;
-  }
-
-  .news-card {
-    margin: 0 auto;
-  }
-}
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-  
-  .menu-icon {
-    display: block; /* Muestra el ícono en móviles */
-  }
-  header{
-    padding: 1rem;
-    min-width: 350px;
-    max-width: 400px;
-  }
-  header .logo {
-    padding-left: 2px;
-    height: 9vh; /* Altura del logo */
-    width: auto;
-  }
-  header nav {
-    position: absolute;
-    top: 100%; /* Coloca el menú debajo del header */
-    left: 0;
-    width: 99%;
-    background-color: var(--color-primary);
-    flex-direction: column;
-    gap: 0;
-    max-height: 0;
-    overflow: hidden;
-    z-index: 1000;
-    transition: max-height 0.3s ease;
-  }
-
-  header nav.nav-active {
-    max-height: 300px; /* Altura máxima del menú desplegable */
-  }
-
-  header nav a {
-    padding: 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-.values {
-  flex-direction: column; /* Cambia la dirección a vertical */
-  align-items: center; /* Centra los elementos */
-  gap: 1rem; /* Añade espacio entre tarjetas */
-  padding: 1rem; /* Reduce el padding */
-}
-
-.value-card {
-  max-width: 100%; /* Ocupa todo el ancho disponible */
-}
-main{
-  padding-top: 100px;
-}
-}
 
 /* Ajuste para el contenido principal */
 main {
@@ -679,24 +517,6 @@ main {
   color: #2eff54; /* Color del punto activo */
 }
 
-/* Estilos para dispositivos móviles en el Hero */
-@media (max-width: 768px) {
-  .hero-image {
-    height: 300px; /* Reduce la altura de las imágenes en móviles */
-  }
-
-  .hero-content {
-    padding: 0.5rem;
-  }
-
-  .hero-content h1 {
-    font-size: 1.5rem; /* Reduce el tamaño del título en móviles */
-  }
-
-  .hero-content p {
-    font-size: 0.9rem; /* Reduce el tamaño del texto en móviles */
-  }
-}
 
 /* Footer */
 .footer {
@@ -813,32 +633,6 @@ main {
 .footer-social a:hover {
   color: #9CC200;
 }
-
-/* Responsive */
-@media (max-width: 900px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-column, .footer-center {
-    width: 100%;
-    align-items: center;
-  }
-}
-
-/* Estilos para dispositivos móviles en el Footer */
-@media (max-width: 768px) {
-  footer {
-    padding: 0.5rem; /* Reduce el padding */
-  }
-
-  .social-links {
-    flex-direction: row; /* Cambia la dirección a vertical */
-    gap: 0.5rem; /* Reduce el espacio entre íconos */
-  }
-}
 /* Contenedor principal */
 .services-container {
   text-align: center;
@@ -892,41 +686,6 @@ main {
 .service-link:hover {
   background-color: #16502D;
 }
-
-/* 📱 Responsividad 📱 */
-
-/* Para tablets (pantallas menores a 768px) */
-@media (max-width: 768px) {
-  .services-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service-card {
-    width: 80%;
-    max-width: 400px;
-  }
-}
-
-/* Para smartphones (pantallas menores a 480px) */
-@media (max-width: 480px) {
-  .services-container {
-    padding: 30px 10px;
-  }
-
-  .services-title {
-    font-size: 1.5rem;
-  }
-
-  .service-card {
-    width: 90%;
-  }
-
-  .service-link {
-    padding: 10px;
-    font-size: 1rem;
-  }
-}
 /*Scrollbar*/
 ::-webkit-scrollbar {
   width: 15px;
@@ -938,4 +697,71 @@ main {
   background: #9CC200 ;
   border-radius: 12px;
   border: 8px solid #9cc200 ;
+}
+@media (max-width: 768px) {
+  body{
+    overflow-x:hidden;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 70%;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 20px;
+    gap: 20px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+
+  nav.nav-active {
+    right: 0;
+  }
+  .slick-list {
+    overflow: hidden !important; /* Asegura que no se corten */
+  }
+  .menu-icon {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  nav h3 {
+    margin: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    height: 45px;
+  }
+  nav {
+    width: 80%; /* Puedes ajustar a 70% o 80% según te guste */
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  header {
+    position: relative;
+  }
+
+  /* Evitar que imágenes o sliders desborden */
+  img, .slider-container {
+    max-width: 100%;
+    height: auto;
+  }
 }
