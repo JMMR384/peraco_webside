@@ -700,20 +700,22 @@ main {
 }
 @media (max-width: 768px) {
   body{
-    overflow-x:hidden;
+    overflow-x: hidden !important;
+    width: 100%;
+  
   }
   nav {
     position: fixed;
     top: 0;
     right: -100%;
     height: 100%;
-    width: 70%;
+    width: 50%;
     background-color: #fff;
     flex-direction: column;
     align-items: flex-start;
     padding: 80px 20px;
     gap: 20px;
-    transition: right 0.3s ease-in-out;
+    transition: right 1.0s ease-in-out;
     box-shadow: -2px 0 5px rgba(0,0,0,0.2);
     z-index: 999;
   }
@@ -739,29 +741,33 @@ main {
 
   header {
     padding: 10px 15px;
+    width: 100%;
   }
 
-  .logo {
-    height: 45px;
+  header .logo {
+    width:  100%;
   }
-  nav {
-    width: 80%; /* Puedes ajustar a 70% o 80% según te guste */
-  }
-
+ 
   .menu-icon {
     display: block;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 15%;
+    top: 30%;
   }
 
-  header {
-    position: relative;
-  }
+  
 
   /* Evitar que imágenes o sliders desborden */
-  img, .slider-container {
+ img .slider-container {
     max-width: 100%;
     height: auto;
   }
+  .values {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: var(--color-background);
+    align-items: center;
+}
 }
