@@ -40,7 +40,7 @@ const NewsDetail = () => {
   return (
     <div className="news-detail">
       {newsItem.image && <img src={newsItem.image} alt={newsItem.title} className="news-image" />}
-      |
+      
       <div className="news-detail-content">
         <h1>{newsItem.title}</h1>
         <p className="news-meta">
