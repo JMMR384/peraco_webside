@@ -1,9 +1,9 @@
 :root {
-  --color-primary: #ffffff; /* Azul principal */
-  --color-secondary: #1b8f31; /* Naranja secundario */
-  --color-background: #f4f4f4; /* Fondo gris claro */
-  --color-text: #333333; /* Texto oscuro */
-  --color-cards:#8feb926d;
+  --color-primary: #ffffff;
+  --color-secondary: #1b8f31; 
+  --color-background: #f4f4f4;
+  --color-text: #333333;
+ 
 }
 
 body {
