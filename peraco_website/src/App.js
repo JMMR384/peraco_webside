@@ -8,7 +8,9 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import News from './pages/News'; // Importa el componente de noticias
 import NewsDetail from './pages/NewsDetail';
+import Login from './pages/Login';
 import './App.css';
+import './Login.css';
 
 const App = () => {
   return (
@@ -34,6 +36,9 @@ const App = () => {
           {/* Noticias */}
           <Route path="/news" element={<News />} />
           <Route path="/news/:id" element={<NewsDetail />} />
+          {/*Login*/}
+          <Route path="/login" element={<Login />} />
+
         </Routes>
       </main>
 
