@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
-import logo from '../assests/images/logo_horizontal.png';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Íconos de hamburguesa y cerrar
-
+const logo= require ('../assests/images/logo_horizontal.png');
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar el menú
@@ -15,7 +14,7 @@ const Header = () => {
   return (
     <header>
       <Link to="/peraco_website">
-        <img src={logo} alt="Logo de Peraco" className="logo" />
+        <img src={logo as string} alt="Logo de Peraco" className="logo" />
       </Link>
 
       {/* Ícono de hamburguesa (solo en móviles) */}

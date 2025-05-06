@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const NewsList = () => {
-  const [news, setNews] = useState([]);
+  type NewsItem = { id: number; title: string; content: string };
+const [news, setNews] = useState<NewsItem[]>([]);
+
 
   useEffect(() => {
     // Simulación de una llamada a una API

@@ -8,7 +8,7 @@ const Newsdetails = () => {
   const { id } = useParams();
   return (
     <div>
-      <NewsDetail id = {id}/>
+      <NewsDetail />
       <NewsCarousel/>
     </div>
   );

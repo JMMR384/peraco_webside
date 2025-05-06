@@ -11,6 +11,7 @@ import NewsDetail from './pages/NewsDetail';
 import Login from './pages/Login';
 import './App.css';
 import './Login.css';
+import StudioDashboard from './peraco_studio/App/';
 
 
 const App = () => {
@@ -39,7 +40,9 @@ const App = () => {
           <Route path="/news/:id" element={<NewsDetail />} />
           {/*Login*/}
           <Route path="/login" element={<Login />} />
-         
+         {/*PeraCo Studio */}
+         <Route path="/peraco_studio/*" element={<StudioDashboard />} />
+
         </Routes>
       </main>
 

@@ -1,12 +1,17 @@
 // src/components/LoginForm.jsx
 import React, { useState } from 'react';
 
+type Props = {
+  onLogin: (credentials: { email: string; password: string }) => void;
+};
 
-const LoginForm = ({ onLogin }) => {
+const LoginForm: React.FC<Props> = ({ onLogin }) => {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+
     e.preventDefault();
     onLogin({ email, password });
   };

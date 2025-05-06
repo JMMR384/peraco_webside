@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebook,  FaInstagram, FaLinkedin } from "react-icons/fa";
-import logo from "../assests/images/logo_original.png";
+const logo = require ("../assests/images/logo_original.png");
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
 
         {/* Columna 2: Centro (Logo + formulario + checkbox) */}
         <div className="footer-center">
-          <img src={logo} alt="Peraco Logo" className="footer-logo" />
+          <img src={logo as string} alt="Peraco Logo" className="footer-logo" />
           <h4>Recibe nuestras noticias</h4>
           <form className="footer-form">
             <input type="email" placeholder="Tu correo electrónico" />

@@ -30,8 +30,8 @@ const news = [
 ];
 
 const NewsDetail = () => {
-  const { id } = useParams();
-  const newsItem = news.find((item) => item.id === parseInt(id));
+  const { id } = useParams<{id : string}>();
+  const newsItem = news.find((item) => item.id === Number(id));
 
   if (!newsItem) {
     return <p>Noticia no encontrada</p>;

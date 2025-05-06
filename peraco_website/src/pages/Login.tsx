@@ -4,7 +4,8 @@ import LoginForm from '../components/LoginForm';
 
 
 const Login = () => {
-  const handleLogin = (credentials) => {
+  const handleLogin = (credentials: { email: string; password: string }) => {
+
     console.log('Iniciar sesión con:', credentials);
     // Aquí puedes llamar a la API y redirigir al dashboard
   };
