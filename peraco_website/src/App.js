@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import './App.css';
 import './Login.css';
 
+
 const App = () => {
   return (
     <Router>
@@ -38,7 +39,7 @@ const App = () => {
           <Route path="/news/:id" element={<NewsDetail />} />
           {/*Login*/}
           <Route path="/login" element={<Login />} />
-
+         
         </Routes>
       </main>
 
