@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
+  title: 'PeraCo Studio',
   description: 'Created with v0',
-  generator: 'v0.dev',
+  generator: 'PeraCo Development team',
 }
 
 export default function RootLayout({
@@ -14,6 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head><title>PeraCo Studio</title></head>
       <body>{children}</body>
     </html>
   )
