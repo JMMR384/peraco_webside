@@ -41,7 +41,7 @@ const App = () => {
           {/*Login*/}
           <Route path="/login" element={<Login />} />
          {/*PeraCo Studio */}
-         <Route path="/peraco_studio/*" element={<StudioDashboard />} />
+         <Route path="/peraco_studio" element={<StudioDashboard />} />
 
         </Routes>
       </main>
