@@ -14,6 +14,12 @@ const LoginForm: React.FC<Props> = ({ onLogin }) => {
 
     e.preventDefault();
     onLogin({ email, password });
+    if (email === 'empleado@peraco.com' && password === '1234') {
+      // 🔐 Redirige al dashboard ya exportado
+      window.location.href = '/peraco_studio';
+    } else {
+      alert('Credenciales incorrectas');
+    }
   };
 
   return (
